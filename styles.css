@@ -1,1 +1,143 @@
- @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@700&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@700&family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Space Mono', monospace;;
+}
+
+:root {
+    --font-size-sm: 0.875rem;
+    --font-size-l: 1.5rem;
+
+    --clr-black: #333333;
+    --clr-grey: #4f4f4f;
+    --clr-grey2: #bdbdbd;
+
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+/* UTILITY CLASSES */
+.fs-sm {
+    font-size: var(--font-size-sm);
+}
+
+.fs-m {
+    font-size: var(--font-size-m);
+}
+
+.fs-l {
+    font-size: var(--font-size-l);
+}
+
+.fs-xl {
+    font-size: var(--font-size-xl);
+}
+
+.fw-400 {
+    font-weight: var(--fw-400);
+}
+
+.fw-700 {
+    font-weight: var(--fw-700);
+}
+
+.clr-blck {
+    color: var(--clr-black);
+}
+
+.clr-gry {
+    color: var(--clr-grey);
+}
+
+.clr-gry2 {
+    color: var(--clr-grey2);
+}
+
+/* MAIN */
+.error-page-main {
+    padding: 2em;
+    height: 100vh;
+    max-width: 1400px;
+    margin-inline: auto;
+}
+
+.error-page__top {
+    font-family: 'Inconsolata', monospace;
+    text-transform: uppercase;
+}
+
+.error-page__middle {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-block: 4em;
+}
+
+.error-page__middle-image {
+    width: 287px;
+    display: block;
+    margin-inline: auto;
+}
+
+.error-page__title {
+    font-size: clamp(3rem, 2.6479rem + 1.5023vw, 4rem);
+}
+
+.error-page__description {
+    margin-block: 2em;
+    font-size: clamp(1.125rem, 0.993rem + 0.5634vw, 1.5rem);
+}
+
+.error-page__home-link {
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5em 2.7em;
+    display: inline-block;
+    background-color: var(--clr-black);
+}
+
+.error-page__bottom {
+    text-align: center;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 703px) {
+    .error-page__middle {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 854px) {
+    .error-page-main {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .error-page__middle {
+        flex-direction: row-reverse;
+        gap: 2em;
+        margin-block: auto;
+        text-align: left;
+        justify-content: flex-start;
+    }
+
+    .error-page__middle-image,
+    .error-page__middle-text-content {
+        flex-basis: 50%;
+    }
+
+    .error-page__bottom {
+        margin-top: auto;
+    }   
+}
