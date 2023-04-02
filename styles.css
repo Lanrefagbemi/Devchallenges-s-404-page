@@ -18,7 +18,7 @@ body {
     --font-size-sm: 0.875rem;
     --font-size-l: 1.5rem;
 
-    --clr-black: #333333;
+    --clr-black: #646464;
     --clr-grey: #4f4f4f;
     --clr-grey2: #bdbdbd;
 
@@ -106,8 +106,18 @@ body {
     background-color: var(--clr-black);
 }
 
+.error-page__home-link:hover {
+    background-color: #b1b0b0;
+    color: #000000;
+
+}
+
 .error-page__bottom {
     text-align: center;
+}
+
+:focus-visible {
+    outline: 2px solid red;
 }
 
 /* MEDIA QUERIES */
